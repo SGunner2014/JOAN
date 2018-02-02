@@ -57,6 +57,13 @@ public abstract class OpenTTD
         pool = new Pool();
         network = new Network(this);
     }
+    
+    public void reset() {
+        game = new Game();
+        pool = new Pool();
+        network = null;
+        network = new Network(this);
+    }
 
     /**
      * Connect the bot to the specified server
