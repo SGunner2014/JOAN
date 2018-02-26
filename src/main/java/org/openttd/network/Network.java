@@ -45,7 +45,7 @@ public class Network
     {
         if (openttd.getPassword().isEmpty()) {
             Logger.getLogger(Network.class.getName()).log(Level.SEVERE, "Cannot connect with empty password");
-            System.exit(2);
+            //System.exit(2);
         }
 
         try {
@@ -57,7 +57,7 @@ public class Network
             this.networkClient.sendAdminJoin();
         } catch (ConnectException ex) {
             Logger.getLogger(Network.class.getName()).log(Level.SEVERE, ex.getMessage());
-            System.exit(3);
+            //System.exit(3);
         }
 
         return true;
